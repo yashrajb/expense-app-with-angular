@@ -1,0 +1,14 @@
+input.ng-invalid.ng-touched,textarea.ng-invalid.ng-touched {
+border:1px solid red;
+outline:0px;
+}
+
+input,textarea,btn{
+border-radius:0px;
+}
+
+.btn {
+  margin-top:12px;
+  border-radius:0px;
+  margin-right:6px;
+}

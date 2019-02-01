@@ -1,0 +1,32 @@
+<div class="container">
+  <h3>Add Expense</h3>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <div class="form-field">
+      <h4>Name:</h4>
+      <input type="text" #name class="form-control" formControlName="name" placeholder="Name"/>
+      
+    </div>
+    <div class="form-field">
+        <h4>Date:</h4>
+      <input type="date" #date class="form-control" formControlName="date"/>
+    </div>
+    <div class="form-field">
+        <h4>Time:</h4>
+      <input type="time" #time class="form-control" formControlName="time"/>
+    </div>
+    <div class="form-field">
+        <h4>Expense:</h4>
+        <input type="number" class="form-control" placeholder="Expense" formControlName="expense"/>
+        <p class="text-warning" *ngIf="form.get('expense').valid===false">Enter a positive value</p>
+    </div>
+    <div class="form-field">
+        <h4>Small Description:</h4>
+     <textarea #desc class="form-control" rows="7" placeholder="Description" formControlName="desc"></textarea>
+    </div>
+    <div class="form-field">
+      <button type="submit" class="btn btn-success" [disabled]="!form.valid">Submit</button>
+      <button *ngIf="isEdit" type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+      <button *ngIf="isEdit===false" type="button" class="btn btn-primary" (click)=" onReset()">Reset</button>
+    </div>
+  </form>
+</div>

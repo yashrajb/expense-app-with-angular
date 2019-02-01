@@ -1,0 +1,8 @@
+.panel {
+border:1px solid lightgrey;
+box-shadow:3px 3px 3px lightgrey;
+}
+
+.btn {
+border-radius:0px;
+}

@@ -10,5 +10,12 @@
 </head>
 <body>
   <app-root></app-root>
+  <script>
+         if(!localStorage.getItem("expenses")){
+           var data = {"expenses":[]};
+           var stringyData = JSON.stringify(data);
+           localStorage.setItem("expenses",stringyData);
+         }
+  </script>
 </body>
 </html>

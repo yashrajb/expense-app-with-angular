@@ -1,0 +1,12 @@
+.panel {
+cursor: pointer;
+box-shadow:3px 3px 3px lightgrey;
+}
+.panel,.panel a:hover,.panel .pane-heading{
+  text-decoration: none !important;
+  color:black !important;
+}
+.btn-primary{
+border-radius:0px;
+}
+
