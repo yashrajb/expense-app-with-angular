@@ -1,6 +1,8 @@
 # BudgetApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+## Run app
+
+Download or clone this repositary got to your terminal and type "npm install" and that's all
 
 ## Development server
 
