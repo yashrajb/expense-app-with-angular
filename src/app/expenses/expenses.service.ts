@@ -10,6 +10,7 @@ export class ExpensesService {
   expensesChanged = new Subject<Expense[]>();
   expenseEdit = new Subject<number>();
   getExpenses(){
+    console.log(JSON.parse(localStorage.getItem("expenses")));
     return JSON.parse(localStorage.getItem("expenses")).slice();
   }
 
