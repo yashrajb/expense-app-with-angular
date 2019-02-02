@@ -10,7 +10,10 @@ export class ExpensesService {
   expensesChanged = new Subject<Expense[]>();
   expenseEdit = new Subject<number>();
   getExpenses(){
-    return this.expenses.slice();
+    if(this.expenses.length){
+      return this.expenses.slice();
+    }
+    return [];
   }
 
   addExpense(value:Expense){
