@@ -10,7 +10,7 @@ export class ExpensesService {
   expensesChanged = new Subject<Expense[]>();
   expenseEdit = new Subject<number>();
   getExpenses(){
-    return JSON.parse(localStorage.getItem("expenses"));
+    return this.expenses.slice();
   }
 
   addExpense(value:Expense){
