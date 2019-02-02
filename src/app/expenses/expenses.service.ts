@@ -6,14 +6,11 @@ import {Subject} from "rxjs";
 })
 export class ExpensesService {
 
-  expenses = [];
+  expenses = JSON.parse(localStorage.getItem("expenses"));
   expensesChanged = new Subject<Expense[]>();
   expenseEdit = new Subject<number>();
   getExpenses(){
-    if(this.expenses.length){
       return this.expenses.slice();
-    }
-    return [];
   }
 
   addExpense(value:Expense){
