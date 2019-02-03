@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import {ExpensesListComponent} from "./expenses/expenses-list/expenses-list.component";
 import { AddexpenseComponent } from './expenses/addexpense/addexpense.component';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadingStrategy, PreloadAllModules } from '@angular/router';
 import {ExpenseDetailComponent} from "./expenses/expense-detail/expense-detail.component";
 import { NotfoundComponent } from './expenses/notfound/notfound.component';
 const routes:Routes = [
@@ -15,7 +15,7 @@ const routes:Routes = [
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
