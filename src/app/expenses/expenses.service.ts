@@ -33,9 +33,7 @@ export class ExpensesService {
     localStorage.setItem("expenses",JSON.stringify(this.expenses));
     this.expensesChanged.next(this.getExpenses());
   }
-  constructor() {
-    
-   }
+  constructor() {}
 
   
 }

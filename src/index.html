@@ -14,7 +14,7 @@
   </app-root>
   <script>
          if(!localStorage.getItem("expenses")){
-           var data = {"expenses":[]};
+           var data = [];
            var stringyData = JSON.stringify(data);
            localStorage.setItem("expenses",stringyData);
          }
